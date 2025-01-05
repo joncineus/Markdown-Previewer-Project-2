@@ -1,11 +1,9 @@
 import ReactMarkdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
 
 function Previewer({markdown}) {
   return (
     <div id="preview" className="p-4 bg-white rounded shadow-md bg-center">
-      <ReactMarkdown 
-        remarkPlugins={[remarkGfm]}  
+      <ReactMarkdown  
         components={{
           table: ({node, ...props}) => <table className="min-w-full divide-y divide-gray-200" {...props} />,
           thead: ({node, ...props}) => <thead className="bg-gray-50" {...props} />,
